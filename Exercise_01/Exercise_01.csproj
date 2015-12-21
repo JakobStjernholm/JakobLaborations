@@ -77,8 +77,10 @@
   <ItemGroup>
     <Content Include="HtmlPages\HTMLTask_01.html" />
     <Content Include="HtmlPages\HTMLTask_02.html" />
+    <Content Include="HtmlPages\HTMLTask_03.html" />
     <Content Include="Scripts\JavaScriptTask_01.js" />
     <Content Include="Scripts\JavaScriptTask_02.js" />
+    <Content Include="Scripts\JavaScriptTask_03.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
