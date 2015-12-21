@@ -2,14 +2,16 @@
 
 
 function myFunction() {
-    var grader = document.getElementById('dropdown').value;
+    var grader = document.getElementById('dropdown');
     var strUser = grader.options[grader.selectedIndex].value;
-    var number = document.getElementById('grader').text;
-    if (strUser === 1) {
+    var number = document.getElementById('grader').value;
+    alert(strUser);
+    if (strUser == 0) {
         document.getElementById('ett').innerHTML = (number - 32) * (5 / 9);
-        alert((number - 32) * (5 / 9));
+        
     } else {
+        alert("Fahrenheit");
+
         document.getElementById('ett').innerHTML = number * (9 / 5) + 32;
-        alert(number * (9 / 5) + 32);
     }
 }
