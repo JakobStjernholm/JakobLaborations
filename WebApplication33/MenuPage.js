@@ -1,7 +1,20 @@
 ﻿//happy hour logic:
+function happyHour() {
+    var happyHourTime = 18;
+    var datetimeNow = new Date(2015, 10, 10, 17);
+
+    if (datetimeNow.getHours() === happyHourTime) {
+        var prices = document.getElementsByClassName('price');
+
+        for (var i = 0; i < prices.length; i++) {
+            prices[i].innerHTML = 16.90;
+        }
+    }
+
+}
 
 //Method calls:
-
+happyHour();
 
 //Adjust price function: (add .toFixed(2) for 2 decimals)
 
