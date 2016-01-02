@@ -24,8 +24,15 @@ function createBurger(name,size,dayOfWeek,price) {
 };
 
 for (var i = 0; i < burgers.length; i++) {
+    var picture = document.createElement('img');
+    picture.src = "..\\Images/Hamburger.png";
     var articleElement = document.createElement('article').appendChild(document.createElement('fieldset')).appendChild(document.createElement('legend')).appendChild(document.createTextNode(burgers[i].dayOfWeek + ' Burger')).parentNode.parentNode.appendChild(document.createElement('h3')).appendChild(document.createTextNode(burgers[i].burgerName)).parentNode.parentNode;
-    
+
+    articleElement.appendChild(document.createElement('span')).appendChild(picture);
+
+    articleElement.appendChild(document.createElement('div')).appendChild(document.createTextNode('Price: ' + burgers[i].burgerPrice));
+
+    articleElement.appendChild(document.createElement('div')).appendChild(document.createTextNode('Size: ' + burgers[i].burgerSize));
 
     var burgersPlace = document.getElementById('burgersPlace');
     burgersPlace.appendChild(articleElement);
