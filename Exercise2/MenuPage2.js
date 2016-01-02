@@ -38,11 +38,41 @@ for (var i = 0; i < burgers.length; i++) {
     burgersPlace.appendChild(articleElement);
 }
 
-
-
 //2. create Product objects with constructor notation, 
 //   use the parameters name, size, price, dayOfTheWeek  (page. 108 in book)
+function Product(name, size, dayOfTheWeek, price) {
+    this.name = name;
+    this.size = size;
+    this.dayOfTheWeek = dayOfTheWeek;
+    this.price = price;
+};
+
 //3. add 7 drinks to the page using Product.
+var drinks = [new Product("Redbull Vodka", "40 cl", "monday", 19.95),
+    new Product("Lennart", "40 cl", "tuesday", 19.95),
+    new Product("Rom & Cola", "40 cl", "wednesday", 19.95),
+    new Product("Vodka!", "6 cl", "thursday", 19.95),
+    new Product("Redbull Cola", "40 cl", "friday", 19.95),
+    new Product("Coca cola", "33 cl", "saturday", 19.95),
+   new Product("Fanta Orange", "33 cl", "sunday", 19.95)
+];
+
+for (var i = 0; i < drinks.length; i++) {
+    var picture = document.createElement('img');
+    picture.src = "..\\Images/Drink.png";
+    var articleElementDrinks = document.createElement('article').appendChild(document.createElement('fieldset')).appendChild(document.createElement('legend')).appendChild(document.createTextNode(drinks[i].dayOfTheWeek)).parentNode.parentNode.appendChild(document.createElement('h3')).appendChild(document.createTextNode(drinks[i].name)).parentNode.parentNode;
+
+    articleElementDrinks.appendChild(document.createElement('span')).appendChild(picture);
+
+    articleElementDrinks.appendChild(document.createElement('div')).appendChild(document.createTextNode('Price: ' + drinks[i].price));
+
+    articleElementDrinks.appendChild(document.createElement('div')).appendChild(document.createTextNode('Size: ' + drinks[i].size));
+
+    var drinksPlace = document.getElementById('drinksPlace');
+    drinksPlace.appendChild(articleElementDrinks);
+}
+
+
 //4. add 7 pizzas to the page using Product.
 //5. add 7 subs to the page using Product.
 //6. GO to file FixIt.html
