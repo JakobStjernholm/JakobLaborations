@@ -21,11 +21,17 @@ function createBurger(name,size,dayOfWeek,price) {
     };
     return hamburger;
 
+};
+
+for (var i = 0; i < burgers.length; i++) {
+    var articleElement = document.createElement('article').appendChild(document.createElement('fieldset')).appendChild(document.createElement('legend')).appendChild(document.createTextNode(burgers[i].dayOfWeek + ' Burger')).parentNode.parentNode.appendChild(document.createElement('h3')).appendChild(document.createTextNode(burgers[i].burgerName)).parentNode.parentNode;
+    
+
+    var burgersPlace = document.getElementById('burgersPlace');
+    burgersPlace.appendChild(articleElement);
 }
 
-var articleElement = document.createElement('article').appendChild(document.createElement('h3'));
-var burgersPlace = document.getElementById('burgersPlace');
-burgersPlace.appendChild(articleElement);
+
 
 //2. create Product objects with constructor notation, 
 //   use the parameters name, size, price, dayOfTheWeek  (page. 108 in book)
