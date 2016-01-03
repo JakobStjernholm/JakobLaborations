@@ -74,7 +74,32 @@ for (var i = 0; i < drinks.length; i++) {
 
 
 //4. add 7 pizzas to the page using Product.
+var pizzas = [new Product("Capprisiosca", "Family pizza", "monday", 20.95),
+    new Product("Kebabpizza", "Medium", "tuesday", 13.95),
+    new Product("Vesuvio", "Small", "wednesday", 7.95),
+    new Product("Hawaii", "Medium", "thursday", 11.95),
+    new Product("Calzone", "Large", "friday", 8.95),
+    new Product("John Blund", "Small", "saturday", 11.95),
+   new Product("Bolognese", "Medium", "sunday", 7.95)
+];
 
+for (var i = 0; i < pizzas.length; i++) {
+    var picture = document.createElement('img');
+    picture.src = "..\\Images/Pizza.png";
+    var articleElementPizzas = document.createElement('article').appendChild(document.createElement('fieldset')).appendChild(document.createElement('legend')).appendChild(document.createTextNode(pizzas[i].dayOfTheWeek)).parentNode.parentNode.appendChild(document.createElement('h3')).appendChild(document.createTextNode(pizzas[i].name)).parentNode.parentNode;
+
+    articleElementPizzas.appendChild(document.createElement('span')).appendChild(picture);
+
+    articleElementPizzas.appendChild(document.createElement('div')).appendChild(document.createTextNode('Price: ' + pizzas[i].price));
+
+    articleElementPizzas.appendChild(document.createElement('div')).appendChild(document.createTextNode('Size: ' + pizzas[i].size));
+
+    var pizzaPlace = document.getElementById('pizzaPlace');
+    pizzaPlace.appendChild(articleElementPizzas);
+}
+
+
+//5. add 7 subs to the page using Product.
 var subs = [new Product("Footlong Sub", "35 cm", "monday", 12.95),
     new Product("Le Sub", "30 cm", "tuesday", 13.95),
     new Product("Special Sub", "25 cm", "wednesday", 13.95),
@@ -84,7 +109,7 @@ var subs = [new Product("Footlong Sub", "35 cm", "monday", 12.95),
    new Product("Mini Sub", "10 cm", "sunday", 7.95)
 ];
 
-for (var i = 0; i < drinks.length; i++) {
+for (var i = 0; i < subs.length; i++) {
     var picture = document.createElement('img');
     picture.src = "..\\Images/Subs.png";
     var articleElementSubs = document.createElement('article').appendChild(document.createElement('fieldset')).appendChild(document.createElement('legend')).appendChild(document.createTextNode(subs[i].dayOfTheWeek)).parentNode.parentNode.appendChild(document.createElement('h3')).appendChild(document.createTextNode(subs[i].name)).parentNode.parentNode;
@@ -99,7 +124,6 @@ for (var i = 0; i < drinks.length; i++) {
     subsPlace.appendChild(articleElementSubs);
 }
 
-//5. add 7 subs to the page using Product.
 //6. GO to file FixIt.html
 
 //DRINKS
