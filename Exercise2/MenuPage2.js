@@ -74,6 +74,31 @@ for (var i = 0; i < drinks.length; i++) {
 
 
 //4. add 7 pizzas to the page using Product.
+
+var subs = [new Product("Footlong Sub", "35 cm", "monday", 12.95),
+    new Product("Le Sub", "30 cm", "tuesday", 13.95),
+    new Product("Special Sub", "25 cm", "wednesday", 13.95),
+    new Product("Medium Sub", "20 cm", "thursday", 17.95),
+    new Product("Meter Sub", "100 cm", "friday", 8.95),
+    new Product("Looooong Sub", "50 cm", "saturday", 11.95),
+   new Product("Mini Sub", "10 cm", "sunday", 7.95)
+];
+
+for (var i = 0; i < drinks.length; i++) {
+    var picture = document.createElement('img');
+    picture.src = "..\\Images/Subs.png";
+    var articleElementSubs = document.createElement('article').appendChild(document.createElement('fieldset')).appendChild(document.createElement('legend')).appendChild(document.createTextNode(subs[i].dayOfTheWeek)).parentNode.parentNode.appendChild(document.createElement('h3')).appendChild(document.createTextNode(subs[i].name)).parentNode.parentNode;
+
+    articleElementSubs.appendChild(document.createElement('span')).appendChild(picture);
+
+    articleElementSubs.appendChild(document.createElement('div')).appendChild(document.createTextNode('Price: ' + subs[i].price));
+
+    articleElementSubs.appendChild(document.createElement('div')).appendChild(document.createTextNode('Size: ' + subs[i].size));
+
+    var subsPlace = document.getElementById('subsPlace');
+    subsPlace.appendChild(articleElementSubs);
+}
+
 //5. add 7 subs to the page using Product.
 //6. GO to file FixIt.html
 
