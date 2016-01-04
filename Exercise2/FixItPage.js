@@ -41,7 +41,7 @@ function myMethod() {
 
 document.write('Hej hej hallå! Skriver här med hjälp av document.write');
 var element = document.createElement('p');
-element.textContent = "Lägger till denna texten i en paragraf med hjälp av document.createElement()";
+element.textContent = "Lägger till denna texten i en paragraf med hjälp av document.createElement() Klicka på mig dessutom!";
 document.getElementById('fourthParagraph').appendChild(element).addEventListener('click',function() {
     alert('Last Modified: ' + document.lastModified + ' URL:en, med hjälp av document.URL ' + document.URL);
 });
@@ -52,6 +52,11 @@ document.getElementById('fourthParagraph').appendChild(element).addEventListener
 //### String objects page 128, 129: ###
 
 //7. Save the the text from the makeMeAnArray-paragraph into an array.
+var myArray = document.getElementById('makeMeAnArray').textContent.split(' ');
+for (var i = 0; i < myArray.length; i++) {
+    document.write(myArray[i] + '<br>');
+}
+
 //8. Use all the string methods and propertys allong with the array
 
 //### String objects page 132: ###
