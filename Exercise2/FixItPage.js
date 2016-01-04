@@ -27,6 +27,7 @@ var alertMessage = 'Different window properties ';
 alertMessage += ' Inner width: ' + window.innerWidth;
 alertMessage += ' Inner height: ' + window.innerHeight;
 alertMessage += ' Which URL am I at? ' + window.location;
+alertMessage += ' Window.screen.width ' + window.screen.width;
 function myMethod() {
     alert(alertMessage);
 }
@@ -37,6 +38,16 @@ function myMethod() {
 //5. PLay with the Methods page 126
 //### DOM page 126:###
 //6. Play with the DOM-properties
+
+document.write('Hej hej hallå! Skriver här med hjälp av document.write');
+var element = document.createElement('p');
+element.textContent = "Lägger till denna texten i en paragraf med hjälp av document.createElement()";
+document.getElementById('fourthParagraph').appendChild(element).addEventListener('click',function() {
+    alert('Last Modified: ' + document.lastModified + ' URL:en, med hjälp av document.URL ' + document.URL);
+});
+
+
+
 
 //### String objects page 128, 129: ###
 
