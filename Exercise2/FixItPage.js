@@ -52,15 +52,43 @@ document.getElementById('fourthParagraph').appendChild(element).addEventListener
 //### String objects page 128, 129: ###
 
 //7. Save the the text from the makeMeAnArray-paragraph into an array.
-var myArray = document.getElementById('makeMeAnArray').textContent.split(' ');
+var myArray = document.getElementById('makeMeAnArray').textContent.split(" ");
 for (var i = 0; i < myArray.length; i++) {
-    document.write(myArray[i] + '<br>');
+    document.write(myArray[i] + "<br>");
 }
-
 //8. Use all the string methods and propertys allong with the array
+document.write("<br>To upper case:<br>");
+for (var i = 0; i < myArray.length; i++) {
+    document.write(myArray[i].toUpperCase() + " ");
+};
+document.write("<br>To lower case:<br>");
+for (var i = 0; i < myArray.length; i++) {
+    document.write(myArray[i].toLowerCase() + " ");
+};
+document.write("<br>Substring:<br>");
+for (var i = 0; i < myArray.length; i++) {
+    document.write(myArray[i].substring(0, 2) + " ");
+};
+document.write("<br>Char at:<br>");
+for (var i = 0; i < myArray.length; i++) {
+    document.write(myArray[i].charAt(2) + " ");
+};
+document.write("<br>Replace:<br>");
+for (var i = 0; i < myArray.length; i++) {
+    document.write(myArray[i].replace("e","****") + " ");
+};
+
+
+
 
 //### String objects page 132: ###
 //9. check if the 4th element in the array is a number
+
+if (isNaN(myArray[3])) {
+    alert(myArray[3]);
+} else {
+    alert();
+}
 
 //### Math page 134: ###
 //10. Round one of the numbers in the paragraph up/down
