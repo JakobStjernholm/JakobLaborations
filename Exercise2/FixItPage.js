@@ -19,6 +19,7 @@ var innerDiv = document.createElement('div');
 innerDiv.id = 'innerDiv';
 innerDiv.innerHTML = 'Click me to see window properties!';
 innerDiv.style.backgroundColor = 'blue';
+innerDiv.style.fontSize = "30px";
 createdDiv.appendChild(innerDiv);
 
 document.getElementById('innerDiv').addEventListener('click', myMethod, false);
@@ -46,7 +47,7 @@ document.write('Hej hej hallå! Skriver här med hjälp av document.write');
 var element = document.createElement('p');
 element.textContent = "Lägger till denna texten i en paragraf med hjälp av document.createElement() Klicka på mig dessutom!";
 element.style.backgroundColor = 'green';
-document.getElementById('fourthParagraph').appendChild(element).addEventListener('click',function() {
+document.getElementById('fourthParagraph').appendChild(element).addEventListener('click', function () {
     alert('Last Modified: ' + document.lastModified + ' URL:en, med hjälp av document.URL ' + document.URL);
 });
 
@@ -56,44 +57,56 @@ document.getElementById('fourthParagraph').appendChild(element).addEventListener
 //### String objects page 128, 129: ###
 
 //7. Save the the text from the makeMeAnArray-paragraph into an array.
-var myArray = document.getElementById('makeMeAnArray').textContent.split(" ");
-for (var i = 0; i < myArray.length; i++) {
-    document.write(myArray[i] + "<br>");
-}
+
 //8. Use all the string methods and propertys allong with the array
-document.write("<br>To upper case:<br>");
-for (var i = 0; i < myArray.length; i++) {
-    document.write(myArray[i].toUpperCase() + " ");
-};
-document.write("<br>To lower case:<br>");
-for (var i = 0; i < myArray.length; i++) {
-    document.write(myArray[i].toLowerCase() + " ");
-};
-document.write("<br>Substring:<br>");
-for (var i = 0; i < myArray.length; i++) {
-    document.write(myArray[i].substring(0, 2) + " ");
-};
-document.write("<br>Char at:<br>");
-for (var i = 0; i < myArray.length; i++) {
-    document.write(myArray[i].charAt(2) + " ");
-};
-document.write("<br>Replace:<br>");
-for (var i = 0; i < myArray.length; i++) {
-    document.write(myArray[i].replace("e","****") + " ");
-};
-
-
-
+var myArray = document.getElementById('makeMeAnArray').textContent.split(" ");
+var myDiv = document.getElementById('myStringMethods');
+var newParagraph = document.createElement('p');
+document.getElementById('myStringMethods').addEventListener('click', function () {
+    for (var i = 0; i < myArray.length; i++) {
+        newParagraph.innerHTML += myArray[i] + "<br>";
+        myDiv.appendChild(newParagraph);
+    }
+    newParagraph.innerHTML += "<br>To upper case:<br>";
+    for (var i = 0; i < myArray.length; i++) {
+        newParagraph.innerHTML += myArray[i].toUpperCase() + " ";
+        myDiv.appendChild(newParagraph);
+    };
+    newParagraph.innerHTML += "<br>To lower case:<br>";
+    for (var i = 0; i < myArray.length; i++) {
+        newParagraph.innerHTML += myArray[i].toLowerCase() + " ";
+        myDiv.appendChild(newParagraph);
+    };
+    newParagraph.innerHTML += "<br>Substring:<br>";
+    for (var i = 0; i < myArray.length; i++) {
+        newParagraph.innerHTML += myArray[i].substring(0, 2) + " ";
+        myDiv.appendChild(newParagraph);
+    };
+    newParagraph.innerHTML += "<br>Char at:<br>";
+    for (var i = 0; i < myArray.length; i++) {
+        newParagraph.innerHTML += myArray[i].charAt(2) + " ";
+        myDiv.appendChild(newParagraph);
+    };
+    newParagraph.innerHTML += "<br>Replace:<br>";
+    for (var i = 0; i < myArray.length; i++) {
+        newParagraph.innerHTML += myArray[i].replace("e", "****") + " ";
+        myDiv.appendChild(newParagraph);
+    };
+});
 
 //### String objects page 132: ###
 //9. check if the 4th element in the array is a number
-
-alert(isNaN(myArray[3]));
+document.getElementById('isnumber').addEventListener('click',function() {
+alert(isNaN(myArray[3]) + ' It\'s not a number!');
+});
 
 //### Math page 134: ###
 //10. Round one of the numbers in the paragraph up/down
+
 var roundNumber = myArray[4];
+document.getElementById('roundnumber').addEventListener('click', function () {
 alert("Rounding " + roundNumber + " to " + Math.round(roundNumber));
+});
 
 //11. replace the 3rd word with PI then roud it to the nearest integer
 var replacedWordToPiAndRoundIt = myArray[2];
@@ -103,14 +116,19 @@ alert("The third word diigo is replaced with " + replacedWordToPiAndRoundIt + "(
 //### Date object### page 137
 //12. Calculate how many days it's until your birthday and present it.
 var birthday = new Date(2016, 08, 10);
-var datetimeNow = new Date(2016,00,04);
+var datetimeNow = new Date(2016, 00, 04);
 var diff = new Date(birthday - datetimeNow);
 var days = diff / 1000 / 60 / 60 / 24;
 
-document.getElementById('birthdayPresentation').innerHTML = Math.round(days)+ " Days until my birthday!";
+document.getElementById('birthdayPresentation').innerHTML = Math.round(days) + " Days until my birthday!";
 
 
 //13. Calculate how many minutes old you are and present it.
+var born = new Date(1991, 08, 10);
+var now = new Date(2016, 00, 04);
+var diffen = new Date(now - born);
+var minutes = diffen / 1000 / 60;
+document.getElementById('minutePresentation').innerHTML = minutes + " minutes have I lived!";
 
 //Bonus exercises:
 //### Demo page 141:###
