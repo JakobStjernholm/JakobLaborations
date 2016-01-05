@@ -27,7 +27,10 @@ var alertMessage = 'Different window properties ';
 alertMessage += ' Inner width: ' + window.innerWidth;
 alertMessage += ' Inner height: ' + window.innerHeight;
 alertMessage += ' Which URL am I at? ' + window.location;
-alertMessage += ' Window.screen.width ' + window.screen.width;
+alertMessage += ' Window.screen.width: ' + window.screen.width;
+alertMessage += ' Window.screen.length: ' + window.screen.length;
+alertMessage += ' Window.history.length: ' + window.history.length;
+
 function myMethod() {
     alert(alertMessage);
 }
@@ -42,6 +45,7 @@ function myMethod() {
 document.write('Hej hej hallå! Skriver här med hjälp av document.write');
 var element = document.createElement('p');
 element.textContent = "Lägger till denna texten i en paragraf med hjälp av document.createElement() Klicka på mig dessutom!";
+element.style.backgroundColor = 'green';
 document.getElementById('fourthParagraph').appendChild(element).addEventListener('click',function() {
     alert('Last Modified: ' + document.lastModified + ' URL:en, med hjälp av document.URL ' + document.URL);
 });
@@ -84,18 +88,28 @@ for (var i = 0; i < myArray.length; i++) {
 //### String objects page 132: ###
 //9. check if the 4th element in the array is a number
 
-if (isNaN(myArray[3])) {
-    alert(myArray[3]);
-} else {
-    alert();
-}
+alert(isNaN(myArray[3]));
 
 //### Math page 134: ###
 //10. Round one of the numbers in the paragraph up/down
+var roundNumber = myArray[4];
+alert("Rounding " + roundNumber + " to " + Math.round(roundNumber));
+
 //11. replace the 3rd word with PI then roud it to the nearest integer
+var replacedWordToPiAndRoundIt = myArray[2];
+replacedWordToPiAndRoundIt = 3.14;
+alert("The third word diigo is replaced with " + replacedWordToPiAndRoundIt + "(PI) And rounded to the nearest integer " + Math.round(replacedWordToPiAndRoundIt));
 
 //### Date object### page 137
 //12. Calculate how many days it's until your birthday and present it.
+var birthday = new Date(2016, 08, 10);
+var datetimeNow = new Date(2016,00,04);
+var diff = new Date(birthday - datetimeNow);
+var days = diff / 1000 / 60 / 60 / 24;
+
+document.getElementById('birthdayPresentation').innerHTML = Math.round(days)+ " Days until my birthday!";
+
+
 //13. Calculate how many minutes old you are and present it.
 
 //Bonus exercises:
