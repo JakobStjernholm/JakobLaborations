@@ -51,9 +51,6 @@ document.getElementById('fourthParagraph').appendChild(element).addEventListener
     alert('Last Modified: ' + document.lastModified + ' URL:en, med hjälp av document.URL ' + document.URL);
 });
 
-
-
-
 //### String objects page 128, 129: ###
 
 //7. Save the the text from the makeMeAnArray-paragraph into an array.
@@ -96,8 +93,9 @@ document.getElementById('myStringMethods').addEventListener('click', function ()
 
 //### String objects page 132: ###
 //9. check if the 4th element in the array is a number
-document.getElementById('isnumber').addEventListener('click',function() {
-alert(isNaN(myArray[3]) + ' It\'s not a number!');
+document.getElementById('isnumber').addEventListener('click', function () {
+    var minoArray = document.getElementById('makeMeAnArray').textContent;
+    alert(isNaN(minoArray[2]) + ' It\'s not a number!');
 });
 
 //### Math page 134: ###
@@ -105,13 +103,13 @@ alert(isNaN(myArray[3]) + ' It\'s not a number!');
 
 var roundNumber = myArray[4];
 document.getElementById('roundnumber').addEventListener('click', function () {
-alert("Rounding " + roundNumber + " to " + Math.round(roundNumber));
+    alert("Rounding " + roundNumber + " to " + Math.round(roundNumber));
 });
 
 //11. replace the 3rd word with PI then roud it to the nearest integer
 var replacedWordToPiAndRoundIt = myArray[2];
 var newPara = "";
-document.getElementById('replaceword').addEventListener('click', function() {
+document.getElementById('replaceword').addEventListener('click', function () {
     replacedWordToPiAndRoundIt = 3.14;
     alert("The third word diigo is replaced with " + replacedWordToPiAndRoundIt + "(PI) And rounded to the nearest integer " + Math.round(replacedWordToPiAndRoundIt));
 
@@ -122,6 +120,7 @@ document.getElementById('replaceword').addEventListener('click', function() {
             newPara += myArray[i] + " ";
         }
     }
+    myArray = "";
     document.getElementById('makeMeAnArray').innerHTML = newPara;
 });
 
@@ -132,11 +131,9 @@ var datetimeNow = new Date(2016, 00, 04);
 var diff = new Date(birthday - datetimeNow);
 var days = diff / 1000 / 60 / 60 / 24;
 
-document.getElementById('birthdayButton').addEventListener('click',function() {
+document.getElementById('birthdayButton').addEventListener('click', function () {
     document.getElementById('birthdayPresentation').innerHTML = Math.round(days) + " Days until my birthday!";
 });
-
-
 
 //13. Calculate how many minutes old you are and present it.
 var born = new Date(1991, 08, 10);
@@ -144,7 +141,7 @@ var now = new Date(2016, 00, 04);
 var diffen = new Date(now - born);
 var minutes = diffen / 1000 / 60;
 
-document.getElementById('minuteButton').addEventListener('click', function() {
+document.getElementById('minuteButton').addEventListener('click', function () {
     document.getElementById('minutePresentation').innerHTML = minutes + " minutes have I lived!";
 });
 
