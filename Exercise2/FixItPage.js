@@ -110,8 +110,20 @@ alert("Rounding " + roundNumber + " to " + Math.round(roundNumber));
 
 //11. replace the 3rd word with PI then roud it to the nearest integer
 var replacedWordToPiAndRoundIt = myArray[2];
-replacedWordToPiAndRoundIt = 3.14;
-alert("The third word diigo is replaced with " + replacedWordToPiAndRoundIt + "(PI) And rounded to the nearest integer " + Math.round(replacedWordToPiAndRoundIt));
+var newPara = "";
+document.getElementById('replaceword').addEventListener('click', function() {
+    replacedWordToPiAndRoundIt = 3.14;
+    alert("The third word diigo is replaced with " + replacedWordToPiAndRoundIt + "(PI) And rounded to the nearest integer " + Math.round(replacedWordToPiAndRoundIt));
+
+    for (var i = 0; i < myArray.length; i++) {
+        if (i === 2) {
+            newPara += "<span class='redclass'>" + Math.round(replacedWordToPiAndRoundIt) + "</span> ";
+        } else {
+            newPara += myArray[i] + " ";
+        }
+    }
+    document.getElementById('makeMeAnArray').innerHTML = newPara;
+});
 
 //### Date object### page 137
 //12. Calculate how many days it's until your birthday and present it.
@@ -120,7 +132,10 @@ var datetimeNow = new Date(2016, 00, 04);
 var diff = new Date(birthday - datetimeNow);
 var days = diff / 1000 / 60 / 60 / 24;
 
-document.getElementById('birthdayPresentation').innerHTML = Math.round(days) + " Days until my birthday!";
+document.getElementById('birthdayButton').addEventListener('click',function() {
+    document.getElementById('birthdayPresentation').innerHTML = Math.round(days) + " Days until my birthday!";
+});
+
 
 
 //13. Calculate how many minutes old you are and present it.
@@ -128,7 +143,10 @@ var born = new Date(1991, 08, 10);
 var now = new Date(2016, 00, 04);
 var diffen = new Date(now - born);
 var minutes = diffen / 1000 / 60;
-document.getElementById('minutePresentation').innerHTML = minutes + " minutes have I lived!";
+
+document.getElementById('minuteButton').addEventListener('click', function() {
+    document.getElementById('minutePresentation').innerHTML = minutes + " minutes have I lived!";
+});
 
 //Bonus exercises:
 //### Demo page 141:###
