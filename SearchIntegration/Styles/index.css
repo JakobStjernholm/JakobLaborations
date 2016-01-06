@@ -2,7 +2,7 @@
     background-color: #000080;
     color: whitesmoke;
     font-family: cursive;
-    font: bold 1.5rem Arial;
+    font: bold 1.2rem Arial;
 }
 #searchbox {
     margin: 0 auto;
@@ -12,4 +12,9 @@
     width: 50%;
     border: 3px solid orange;
     border-radius: 50px 14px 50px 12px;
+}
+input {
+    padding: 5px;
+    width: 300px;
+    margin-bottom: 20px;
 }
