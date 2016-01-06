@@ -95,7 +95,7 @@
                         dataOutput += "</li>";
                     };
                 });
-                dataOutput += "</ul>";
+                
 
                 $('#presented-data').html(dataOutput);
             });
