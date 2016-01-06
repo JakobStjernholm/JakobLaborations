@@ -1,2 +1,15 @@
 ﻿body {
+    background-color: #000080;
+    color: whitesmoke;
+    font-family: cursive;
+    font: bold 1.5rem Arial;
+}
+#searchbox {
+    margin: 0 auto;
+    background-color: orangered;
+    text-align: center;
+    padding: 10px;
+    width: 50%;
+    border: 3px solid orange;
+    border-radius: 50px 14px 50px 12px;
 }
