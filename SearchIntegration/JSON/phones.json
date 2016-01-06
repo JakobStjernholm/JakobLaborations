@@ -1,3 +1,22 @@
-﻿{
-
-}
+﻿[
+  {
+    "about": "iPhone 5 is the new amazing Apple product. It's the best so far. With super-fast internet",
+    "name": "Apple iPhone 5S",
+    "url_image": "Apple-iPhone-5s.png"
+  },
+  {
+    "about": "Nokia Lumia is the new cool phone for you! With 128 GB storage, it's amazing!",
+    "name": "Nokia Lumia",
+    "url_image": "Nokia-Lumia-1520-3.jpg"
+  },
+  {
+    "about": "Big storage at 64 GB, superfast internet and new cool fingerprint technique",
+    "name": "Samsung Galaxy S5",
+    "url_image": "Samsung-Galaxy-S5-3.jpg"
+  },
+  {
+    "about": "Windows Phone is great with the compatibility to your windows computer!",
+    "name": "Windows Phone",
+    "url_image": "windows-phone.png"
+  }
+]
