@@ -1,3 +1,27 @@
-﻿{
-
-}
+﻿[
+  {
+    "about": "Andersson is one of the cheapest LED 32' TV you can buy. Good picture",
+    "name": "Andersson 32' LED",
+    "url_image": "andersson-tv.jpg"
+  },
+  {
+    "about": "This curved Samsung TV is amazing, winnig prize for best screen 2015.",
+    "name": "Samsung 55' LED Curved",
+    "url_image": "samsung-tv.jpg"
+  },
+  {
+    "about": "Best plasma TV on the market right now. Comes with good speekers.",
+    "name": "Seiki 46' Plasma TV",
+    "url_image": "Seiki39UY044KTV.jpg"
+  },
+  {
+    "about": "Sharp tv comes with a very sharp screen. It is perfectly when watching sports!",
+    "name": "Sharp 42' LED",
+    "url_image": "sharp-tv.jpg"
+  },
+  {
+    "about": "A great TV with only 5 cm deep. Has 5 years guarantee.",
+    "name": "HT TV 32' Plasma",
+    "url_image": "tv-ht-fo1.jpg"
+  }
+]

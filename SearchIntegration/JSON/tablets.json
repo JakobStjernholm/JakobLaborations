@@ -5,6 +5,18 @@
     "url_image": "ipad-mini.jpg"
   },
   {
-
+    "about": "This Samsung tablet comes with a really nice screen. Looks really sharp.",
+    "name": "Samsung Tablet",
+    "url_image": "tablet-samsung.jpg"
+  },
+  {
+    "about": "This is Sonys latest product. The Sony tablet. Has good UI.",
+    "name": "Sony Tablet",
+    "url_image": "tablet-sony.jpg"
+  },
+  {
+    "about": "This HTC tablet is a tablet with the new function 'Talk-to' that no other tablet has.",
+    "name": "HTC Tablet",
+    "url_image": "htc-tablet.jpg"
   }
 ]
