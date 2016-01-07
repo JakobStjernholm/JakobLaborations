@@ -4,6 +4,10 @@
     $('#search').keyup(function () {
         showResult();
     });
+    $('.myCheckboxes').change(function() {
+        showResult();
+    });
+
 });
 function showResult() {
     var mySearchField = $('#search').val();
