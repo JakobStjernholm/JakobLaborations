@@ -41,7 +41,7 @@ Make price background red.
 Reduce price by another 20%:*/
 
 function todaysOffer() {
-    var date = new Date(2015, 10, 26);
+    var date = new Date();
     var dayOfDate = date.getDay();
 
     switch (true) {
