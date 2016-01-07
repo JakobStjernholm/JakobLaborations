@@ -70,6 +70,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\andersson-tv.jpg" />
+    <Content Include="Images\ipad-mini.jpg" />
+    <Content Include="Images\iphone-6.jpg" />
+    <Content Include="Images\Toshiba-laptop.jpg" />
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-2.1.0.min.map" />
     <None Include="Web.Debug.config">

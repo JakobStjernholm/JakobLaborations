@@ -18,5 +18,10 @@
     "about": "Windows Phone is great with the compatibility to your windows computer!",
     "name": "Windows Phone",
     "url_image": "windows-phone.png"
+  },
+  {
+    "about": "iPhone 6S is Apples newest iPhone. It comes with 64GB storage. In black.",
+    "name": "iPhone 6S",
+    "url_image": "iphone-6.jpg"
   }
 ]

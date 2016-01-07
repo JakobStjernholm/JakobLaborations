@@ -3,6 +3,26 @@
     "about": "A fast Apple computer. Mac Laptop",
     "name": "Mac Laptop",
     "url_image": "mac-laptop.jpg"
+  },
+  {
+    "about": "The new Asus Laptop comes with 1 TB storage. Also SSD with 128 GB.",
+    "name": "Asus Laptop",
+    "url_image": "asus-laptop.jpg"
+  },
+  {
+    "about": "A laptop with Windows 10 and very fast computer. Intel Core i7 processor.",
+    "name": "HP Laptop",
+    "url_image": "hp-laptop.jpg"
+  },
+  {
+    "about": "Lenovo has done it again. A amazing computer with 32 GB RAM memomry! Also comes with great sound, Sonic Master sound.",
+    "name": "Lenovo Laptop",
+    "url_image": "lenovo-laptop.jpg"
+  },
+  {
+    "about": "Laptop from Toshiba. Best computer 2015 from PC.com.",
+    "name": "Toshiba Laptop",
+    "url_image": "Toshiba-laptop.jpg"
   }
   
 ]

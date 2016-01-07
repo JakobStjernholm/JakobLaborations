@@ -1,4 +1,6 @@
 ﻿$(function () {
+    $('#search').focus();
+    $('#search').reload();
     $('#search').keyup(function () {
         var mySearchField = $('#search').val();
         var regExpression = new RegExp(mySearchField, "i");
