@@ -1,7 +1,7 @@
 ﻿//happy hour logic:
 function happyHour() {
     var happyHourTime = 18;
-    var datetimeNow = new Date(2015, 10, 10, 18);
+    var datetimeNow = new Date();
 
     if (datetimeNow.getHours() === happyHourTime) {
         var prices = document.getElementsByClassName('price');

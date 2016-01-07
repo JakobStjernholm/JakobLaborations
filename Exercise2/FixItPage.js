@@ -127,7 +127,7 @@ document.getElementById('replaceword').addEventListener('click', function () {
 //### Date object### page 137
 //12. Calculate how many days it's until your birthday and present it.
 var birthday = new Date(2016, 08, 10);
-var datetimeNow = new Date(2016, 00, 04);
+var datetimeNow = new Date();
 var diff = new Date(birthday - datetimeNow);
 var days = diff / 1000 / 60 / 60 / 24;
 
@@ -137,7 +137,7 @@ document.getElementById('birthdayButton').addEventListener('click', function () 
 
 //13. Calculate how many minutes old you are and present it.
 var born = new Date(1991, 08, 10);
-var now = new Date(2016, 00, 04);
+var now = new Date();
 var diffen = new Date(now - born);
 var minutes = diffen / 1000 / 60;
 
